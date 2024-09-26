@@ -16,20 +16,20 @@ Problema de classificação. Saber se o aluno irá concluir o curso online, base
 ---
 ## Instalação via Docker
 
-Clonar as pastas `front` e `api` deste repositório, assim como o arquivo `docker-compose.yml`.
+Clonar as pastas `api` e `front` deste repositório, assim como o arquivo `docker-compose.yml`.
 
 Em uma estrutura de pastas similar a esta: 
 
 - /MVP3
-- /api (onde você irá clonar o back-end da aplicação)
-- /front (onde você irá clonar o front-end da aplicação)
+- /api (onde está o back-end da aplicação)
+- /front (onde está o front-end da aplicação)
 - docker-compose.yml 
 
-Se desejar outra estrutura de pastas, você pode editar o arquivo docker-compose.yml para os locais que desejar, apenas localize os termos "build" e substitua os contextos pelas suas pastas.
+Se desejar outra estrutura de pastas, você pode editar o arquivo `docker-compose.yml` para os locais que desejar, apenas localize os termos "build" e substitua os contextos pelas suas pastas.
 
 Com tudo pronto basta acessar a pasta onde está o docker-compose.yml via terminal e, com o docker desktop em execução, rodar o seguinte comando:
 
-docker-compose up --build
+`docker-compose up --build`
 
 O esperado é que o back-end rode em localhost na porta 5000: http://127.0.0.1:5000/ pois todas as rotas apontam para este destino. O front-end está configurado para rodar em localhost na porta 80, que é o padrão do servidor Nginx http://127.0.0.1/ mas você também pode ajustar para a sua necessidade.
 
