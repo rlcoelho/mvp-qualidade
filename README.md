@@ -9,7 +9,6 @@ Problema de classificação. Saber se o aluno irá concluir o curso online, base
 ### Créditos do DataSet utilizado
 
 > Dataset Predict Online Course Engagement
-> Entendendo a relação entre o comportamento do usuário e a conclusão do curso
 > Rabie El Kharoua. (2024). 🎓 Predict Online Course Engagement Dataset [Data set]. Kaggle.
 > DOI 10.34740/kaggle/dsv/8725325
 
@@ -20,10 +19,10 @@ Clonar as pastas `front` e `api` deste repositório, assim como o arquivo `docke
 
 Em uma estrutura de pastas similar a esta: 
 
-/MVP3
-/api (onde você irá clonar o back-end da aplicação)
-/front (onde você irá clonar o front-end da aplicação)
-docker-compose.yml 
+- /MVP3
+- /api (onde você irá clonar o back-end da aplicação)
+- /front (onde você irá clonar o front-end da aplicação)
+- docker-compose.yml 
 
 Se desejar outra estrutura de pastas, você pode editar o arquivo docker-compose.yml para os locais que desejar, apenas localize os termos "build" e substitua os contextos pelas suas pastas.
 
