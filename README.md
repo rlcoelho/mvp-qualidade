@@ -20,10 +20,10 @@ Clonar as pastas `api` e `front` deste repositório, assim como o arquivo `docke
 
 Em uma estrutura de pastas similar a esta: 
 
-- /MVP3
-- /api (onde está o back-end da aplicação)
-- /front (onde está o front-end da aplicação)
-- docker-compose.yml 
+- MVP3
+- MVP3/api (onde está o back-end da aplicação)
+- MVP3/front (onde está o front-end da aplicação)
+- MVP3/docker-compose.yml 
 
 Se desejar outra estrutura de pastas, você pode editar o arquivo `docker-compose.yml` para os locais que desejar, apenas localize os termos "build" e substitua os contextos pelas suas pastas.
 
