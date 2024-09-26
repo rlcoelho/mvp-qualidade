@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>API - Predição sobre a conclusão do curso online</title>
+  <style>
+    #resultado {
+      display: none;
+    }
+    .resultado-negativo {
+      color: red;
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+    .resultado-positivo {
+      color: green;
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+    .help-icon {
+      color: blue;
+      cursor: pointer;
+      margin-left: 2px;
+    }
+  </style>
+</head>
+<body class="bg-body-tertiary">
+  <div class="container">
+    <main>
+
+      <div class="py-5 text-center">
+        <h3 class="fw-bold text-primary-emphasis">Predição sobre a conclusão do curso online!</h3>
+        <p class="p-1">Informe como o aluno está participando do curso para realizar uma predição e saber se ele irá concluir ou não o curso.</p>
+      </div>
+              
+      <!-- Formulário da predição -->
+      <div class="container">
+        <form id="formPredicao" class="row g-3">
+
+          <div class="col-4">
+            <label for="ccateg" class="form-label fw-bold" style="font-size: 0.75rem;">Categoria do curso</label>
+            <select id="ccateg" class="form-select" onclick="ocultarResultado()">
+              <option value=""></option>
+              <option value="Arts">Artes</option>
+              <option value="Business">Negócio</option>
+              <option value="Health">Saúde</option>
+              <option value="Programming">Programação</option>
+              <option value="Science">Ciência</option>
+            </select>
+          </div>
+
+          <div class="col-4">
+            <label for="timesp" class="form-label fw-bold" style="font-size: 0.75rem;">
+              Tempo gasto no curso
+              <span class="help-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Exemplo: 35.04">(?)</span>
+            </label>
+            <input id="timesp" type="number" step="0.01" class="form-control" onclick="ocultarResultado()">
+          </div>
+
+          <div class="col-4">
+            <label for="nvideo" class="form-label fw-bold" style="font-size: 0.75rem;">
+              Número de videos assistidos
+              <span class="help-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Exemplo: 21">(?)</span>
+            </label>
+            <input id="nvideo" type="number" class="form-control" onclick="ocultarResultado()">
+          </div>
+
+          <div class="col-4">
+            <label for="nquizz" class="form-label fw-bold" style="font-size: 0.75rem;">
+              Número de questionários realizados
+              <span class="help-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Exemplo: 10">(?)</span>
+            </label>
+            <input id="nquizz" type="number" class="form-control" onclick="ocultarResultado()">
+          </div>
+
+          <div class="col-4">
+            <label for="qscore" class="form-label fw-bold" style="font-size: 0.75rem;">
+              Pontuações dos questionários
+              <span class="help-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Exemplo: 59.20">(?)</span>
+            </label>
+            <input id="qscore" type="number" step="0.01" class="form-control" onclick="ocultarResultado()">
+          </div>
+
+          <div class="col-4">
+            <label for="corate" class="form-label fw-bold" style="font-size: 0.75rem;">
+              Taxa de conclusão
+              <span class="help-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Exemplo: 95.43">(?)</span>
+            </label>
+            <input id="corate" type="number" step="0.01" class="form-control" onclick="ocultarResultado()">
+          </div>
+
+          <div class="col-4">
+            <label for="device" class="form-label fw-bold" style="font-size: 0.75rem;">Tipo do dispositivo</label>
+            <select id="device" class="form-select" onclick="ocultarResultado()">
+              <option value=""></option>
+              <option value="0">Desktop</option>
+              <option value="1">Mobile</option>
+            </select>
+          </div>
+
+          <div class="col-8 py-4">
+            <button type="button" class="btn btn-primary me-2" onclick="prepararPredicao(this);">Realizar predição</button>
+            <button type="button" class="btn btn-secondary" onclick="limparCamposForm();">Limpar campos</button>
+          </div>
+
+        </form>        
+      </div>
+
+      <!-- Resultado da predição -->
+      <div class="container">
+        <div class="col-12 py-4 text-center" id="resultado">
+          <h3 class="fw-bold text-primary-emphasis">Resultado da predição</h3>
+          <p class="p-1">Com essas características o aluno:</p>
+          <p class="p-1" id="resultado-texto"></p>
+        </div> 
+      </div>
+          
+    </main>
+          
+    <footer class="my-5 pt-5 text-body-secondary text-center text-small">
+      <p class="mb-1 fw-bold" style="font-size: 0.75rem;">A acurácia deste modelo é de 95%</p>
+      <p class="mb-1">© 2024 - API Predição sobre a conclusão do curso online</p>
+    </footer>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="js/scripts.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
