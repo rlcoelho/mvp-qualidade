@@ -9,7 +9,8 @@ Problema de classificação. Saber se o aluno irá concluir o curso online, base
 ### Créditos do DataSet utilizado
 
 > Dataset Predict Online Course Engagement
-> Rabie El Kharoua. (2024). 🎓 Predict Online Course Engagement Dataset [Data set]. Kaggle.
+> Rabie El Kharoua. (2024).
+> 🎓 Predict Online Course Engagement Dataset [Data set]. Kaggle.
 > DOI 10.34740/kaggle/dsv/8725325
 
 ---
