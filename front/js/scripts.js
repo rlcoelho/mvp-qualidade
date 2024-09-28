@@ -44,7 +44,7 @@ const prepararPredicao = () => {
 
 /*
   --------------------------------------------------------------------------------------
-  Função com a rota POST que inclui um abrigo
+  Função com a rota POST que realiza uma predição
   --------------------------------------------------------------------------------------
 */
 const postPredicao = async (ccateg, timesp, nvideo, nquizz, qscore, corate, device) => {
